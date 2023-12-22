@@ -15,10 +15,10 @@ const processCSVData = (filePath) => {
 
 const updateDatabase = async () => {
     try {
-        const pickupData = await processCSVData('data/Pickup.csv');
-        const deliveryExceptionsData = await processCSVData('data/Delivery_exceptions.csv');
-        const deliveredData = await processCSVData('data/Delivered.csv');
-        const returnedData = await processCSVData('data/Returned.csv');
+        const pickupData = await processCSVData('/datadata/Pickup.csv');
+        const deliveryExceptionsData = await processCSVData('/data/Delivery exceptions.csv');
+        const deliveredData = await processCSVData('/data/Delivered.csv');
+        const returnedData = await processCSVData('/data/Returned.csv');
 
         // Assuming cardId is the common identifier in all CSVs
         const allData = [...pickupData, ...deliveryExceptionsData, ...deliveredData, ...returnedData];
